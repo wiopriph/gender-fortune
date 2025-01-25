@@ -56,7 +56,7 @@ const isOpenModal = ref(false);
 
 
 const title = 'Коротаев или Коротаева?';
-const description = 'Нажми на кнопку, чтобы узнать';
+const description = 'Нажми на кнопку, чтобы узнать.';
 const image = '/image.jpg';
 
 useHead({
