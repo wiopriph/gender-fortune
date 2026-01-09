@@ -17,13 +17,13 @@ const CANVAS_OPTIONS = {
 };
 
 
-const PRIZE_ID = 1;
+const PRIZE_ID = 2;
 
 const PRIZES = [
   {
     id: 1,
     name: 'Мальчик',
-    value: 'У вас будет внук',
+    value: 'У вас будет мальчик',
     bgColor: '#6085DE',
     color: '#FFFFFF',
     probability: 50,
@@ -31,7 +31,7 @@ const PRIZES = [
   {
     id: 2,
     name: 'Девочка',
-    value: 'У вас будет внучка',
+    value: 'У вас будет девочка',
     bgColor: '#FF92A5',
     color: '#ffffff',
     probability: 50,
@@ -55,7 +55,7 @@ function onRotateEnd() {
 const isOpenModal = ref(false);
 
 
-const title = 'Коротаев или Коротаева?';
+const title = 'Мальчик или Девочка?';
 const description = 'Нажми на кнопку, чтобы узнать.';
 const image = 'https://korotaev-gender.onrender.com/images/image.webp';
 
