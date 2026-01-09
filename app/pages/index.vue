@@ -57,7 +57,7 @@ const isOpenModal = ref(false);
 
 const title = 'Мальчик или Девочка?';
 const description = 'Нажми на кнопку, чтобы узнать.';
-const image = 'https://korotaev-gender.onrender.com/images/image.webp';
+const image = 'https://gender-party.onrender.com/images/image.webp';
 
 useHead({
   title: computed(() => title),
