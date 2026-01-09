@@ -57,23 +57,23 @@ const isOpenModal = ref(false);
 
 const title = 'Коротаев или Коротаева?';
 const description = 'Нажми на кнопку, чтобы узнать.';
-const image = '/image.jpg';
+const image = 'https://korotaev-gender.onrender.com/images/image.webp';
 
 useHead({
   title: computed(() => title),
   meta: computed(() => [
-    {key: 'og:type', property: 'og:type', content: 'website'},
-    {hid: 'og:image', property: 'og:image', content: image},
-    {key: 'og:image:width', property: 'og:image:width', content: '512'},
-    {key: 'og:image:height', property: 'og:image:height', content: '512'},
-    {key: 'og:title', property: 'og:title', content: title},
-    {key: 'og:description', property: 'og:description', content: description},
+    { key: 'og:type', property: 'og:type', content: 'website' },
+    { hid: 'og:image', property: 'og:image', content: image },
+    { key: 'og:image:width', property: 'og:image:width', content: '512' },
+    { key: 'og:image:height', property: 'og:image:height', content: '512' },
+    { key: 'og:title', property: 'og:title', content: title },
+    { key: 'og:description', property: 'og:description', content: description },
 
-    {key: 'description', name: 'description', content: description},
+    { key: 'description', name: 'description', content: description },
 
-    {hid: 'twitter:image', property: 'twitter:image', content: image},
-    {key: 'twitter:title', property: 'twitter:title', content: title},
-    {key: 'twitter:description', property: 'twitter:description', content: description},
+    { hid: 'twitter:image', property: 'twitter:image', content: image },
+    { key: 'twitter:title', property: 'twitter:title', content: title },
+    { key: 'twitter:description', property: 'twitter:description', content: description },
   ]),
 });
 </script>
@@ -81,24 +81,24 @@ useHead({
 <template>
   <div :class="$style.root">
     <FortuneWheel
-        :canvas="CANVAS_OPTIONS"
-        :duration="7000"
-        :prizeId="PRIZE_ID"
-        :prizes="PRIZES"
-        :verify="isVerifying"
-        @rotate-end="onRotateEnd"
-        @rotate-start="onCanvasRotateStart"
+      :canvas="CANVAS_OPTIONS"
+      :duration="7000"
+      :prizeId="PRIZE_ID"
+      :prizes="PRIZES"
+      :verify="isVerifying"
+      @rotate-end="onRotateEnd"
+      @rotate-start="onCanvasRotateStart"
     />
 
     <Modal
-        v-if="isOpenModal"
-        @close="isOpenModal = false"
+      v-if="isOpenModal"
+      @close="isOpenModal = false"
     >
       <div :class="$style.content">
         <img
-            :class="$style.image"
-            alt="bird"
-            src="../assets/images/bird.png"
+          :class="$style.image"
+          alt="bird"
+          src="/images/bird.webp"
         >
       </div>
     </Modal>
@@ -111,7 +111,7 @@ useHead({
   align-items: center;
   justify-content: center;
   height: 100%;
-  background-image: url("~/assets/images/background.jpg");
+  background-image: url("/images/background.webp");
   background-size: cover;
 }
 

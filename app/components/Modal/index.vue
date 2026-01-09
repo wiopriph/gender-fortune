@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Props} from './types';
+import type { Props } from './types';
 
 
 const props = withDefaults(defineProps<Props>(), {
@@ -8,7 +8,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const rootStyles = computed(() => ({
-  'max-width': props.maxWidth
+  'max-width': props.maxWidth,
 }));
 
 const emit = defineEmits(['close']);
@@ -50,12 +50,15 @@ onBeforeUnmount(unlockScroll);
 <template>
   <Teleport to="body">
     <div
-        :class="$style.modal"
-        @click.self="closeModal"
+      :class="$style.modal"
+      @click.self="closeModal"
     >
       <div :class="$style.wrapper">
-        <div :class="$style.content" :style="rootStyles">
-          <slot/>
+        <div
+          :class="$style.content"
+          :style="rootStyles"
+        >
+          <slot />
         </div>
       </div>
     </div>

@@ -3,30 +3,29 @@ import StylelintPlugin from 'vite-plugin-stylelint';
 
 
 export default defineNuxtConfig({
-    compatibilityDate: '2024-11-01',
+  css: [
+    '~/assets/scss/global.scss',
+  ],
 
-    css: [
-        '~/assets/scss/global.scss',
+  devtools: {
+    enabled: false,
+  },
+
+  vite: {
+    plugins: [
+      StylelintPlugin(),
+      svgLoader({
+        svgo: false,
+      }),
     ],
 
-    devtools: {
-        enabled: false,
-    },
 
-    vite: {
-        plugins: [
-            StylelintPlugin(),
-            svgLoader({
-                svgo: false,
-            }),
-        ],
-
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    api: 'modern',
-                },
-            },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern',
         },
+      },
     },
-})
+  },
+});
